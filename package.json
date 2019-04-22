@@ -7,6 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": "https://github.com/kyuuseiryuu/create-utools",
   "keywords": [],
   "author": "",
   "license": "ISC",
