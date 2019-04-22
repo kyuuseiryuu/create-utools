@@ -1,6 +1,6 @@
 {
 	"pluginName": "",
-	"main": "./dist/index.html",
+	"main": "./pages/index.html",
 	"preload": "preload.js",
 	"version": "0.0.1",
 	"logo": "./logo.png",
