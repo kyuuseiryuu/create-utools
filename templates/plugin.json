@@ -1,0 +1,12 @@
+{
+	"pluginName": "",
+	"main": "./dist/index.html",
+	"preload": "preload.js",
+	"version": "0.0.1",
+	"logo": "./logo.png",
+	"development": {
+		"main": "http://localhost:8000/index.html"
+	},
+	"features": [
+	]
+}
