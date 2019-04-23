@@ -2,7 +2,7 @@ const Generator = require('yeoman-generator');
 const defaultConfig = require('./templates/plugin.json');
 const glob = require('glob');
 const fs = require('fs');
-
+const repository = 'https://github.com/kyuuseiryuu/utools-types';
 
 class UToolsGenerator extends Generator {
   constructor(props) {
@@ -25,7 +25,13 @@ class UToolsGenerator extends Generator {
         type: 'confirm',
         message: '启用开发者模式',
         default: true,
-      }
+      },
+      {
+        name: 'install',
+        type: 'confirm',
+        message: '安装 utools-types 使 IDE 智能提示 uTools API',
+        default: true,
+      },
     ]).then(answers => {
       this.answers = answers;
     });
@@ -50,6 +56,11 @@ class UToolsGenerator extends Generator {
       }
     });
     this.fs.writeJSON(this.destinationPath('plugin.json'), config);
+  }
+  install() {
+    if (this.answers.install) {
+      this.yarnInstall([repository], { dev: true });
+    }
   }
 }
 
