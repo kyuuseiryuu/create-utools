@@ -8,5 +8,10 @@
 		"main": "http://localhost:8000/index.html"
 	},
 	"features": [
+		{
+			"code": "main",
+			"explain": "这是一个测试插件",
+			"cmds":["test", "测试"]
+		}
 	]
 }
