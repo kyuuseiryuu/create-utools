@@ -43,6 +43,7 @@ class UToolsGenerator extends Generator {
     } else {
       delete config.development;
     }
+    delete config.install;
     glob.sync('**/*', {
       cwd: this.templatePath(),
       dot: true
